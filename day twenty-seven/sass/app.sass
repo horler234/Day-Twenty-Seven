@@ -1,0 +1,298 @@
+$lime-green: hsl(163, 72%, 41%)
+$bright-red: hsl(356, 69%, 56%)
+$facebook: hsl(195, 100%, 50%)
+$twitter: hsl(203, 89%, 53%)
+$instagram: linear gradient hsl(37, 97%, 70%)50%, hsl(329, 70%, 58%)
+$you-tube: hsl(348, 97%, 39%)
+
+// Dark Theme
+$toggle-dark: linear-gradient (90deg, rgb(55,143,230) 23%, rgb(62, 218, 130)91%)
+
+// Light Theme
+$toggle-light: hsl(230, 22%, 74%)
+
+// Dark Theme
+$very-dark-blue-BG: hsl(230, 17%, 14%)
+$very-dark-blue-top-BG-pattern: hsl(232, 19%, 15%)
+$dark-desaturated-blue-card-BG: hsl(228, 28%, 20%)
+$desaturated-blue-text: hsl(228, 34%, 66%)
+$white-text: hsl(0, 0%, 100%)
+
+// Light Theme
+$white-BG: hsl(0, 0%, 100%)
+$very-pale-blue-top-BG-pattern: hsl(225, 100%, 98%)
+$light-grayish-blue-card-BG: hsl(227, 47%, 96%)
+$dark-grayish-blue-text: hsl(228, 12%, 44%)
+$very-dark-blue-text: hsl(230, 17%, 14%)
+
+*
+  margin: 0
+  padding: 0
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+  body
+    font-family: 'Inter', sans-serif
+    padding-bottom: 50px
+
+p
+  font-size: 14px
+
+h1
+  font-size: 24px
+
+.container
+  max-width: 1100px
+  margin: auto
+  width: 100%
+
+header
+  background: $very-pale-blue-top-BG-pattern
+  border-radius: 0 0 20px 20px
+  padding: 30px 0 150px
+
+.header-flex
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+h1.dashboard-header
+  color: $very-dark-blue-text
+  margin-bottom: 5px
+
+p.dashboard-text,
+p.dark-text
+  color: $desaturated-blue-text
+  font-weight: 700
+
+p.dark-text
+  margin-top: 23px
+  margin-right: 10px
+
+.dark
+  display: flex
+  justify-content: space-between
+
+.switch
+  position: relative
+  display: inline-block
+  width: 49px
+  height: 24px
+  margin-top: 20px
+
+  input
+    opacity: 0
+    width: 0
+    height: 0
+
+.slider-round
+  position: absolute
+  cursor: pointer
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background-color: $toggle-light
+  -webkit-transition: .4s
+  transition: .4s
+  border-radius: 34px
+
+.slider-round:before
+  position: absolute
+  content: ""
+  height: 16px
+  width: 16px
+  right: 4px
+  bottom: 4px
+  background-color: $light-grayish-blue-card-BG
+  -webkit-transition: .4s
+  transition: .4s
+  border-radius: 50%
+
+input:checked + .slider-round
+  background: rgb(55,143,230)
+  background: linear-gradient(90deg, rgba(55,143,230,1) 23%, rgba(62,218,130,0.99) 91%)
+
+input:checked + .slider-round:before
+  -webkit-transform: translateX(-26px)
+  -ms-transform: translateX(-26px)
+  transform: translateX(-26px)
+
+.first-grid
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: -110px
+
+
+
+.card
+  background-color: $light-grayish-blue-card-BG
+  width: 30%
+  padding: 30px 0
+  text-align: center
+  border-radius: 5px
+  border-top: 4px solid $facebook
+
+ul.icon-list
+  display: flex
+  list-style: none
+  width: 83px
+  margin: auto
+  margin-bottom: 10px
+
+p.handle
+  font-size: 12px
+  color: $dark-grayish-blue-text
+  margin-top: 3px
+  margin-left: 8px
+
+h1.number
+  color: $very-dark-blue-text
+  font-size: 2rem
+
+p.follower
+  color: $desaturated-blue-text
+  letter-spacing: 4px
+  margin-bottom: 10px
+
+ul.rise-list
+  display: flex
+  list-style: none
+  width: 64px
+  margin: auto
+  margin-top: 15px
+
+p.rise
+  font-size: 12px
+  color: $lime-green
+  font-weight: 700
+  margin-top: 6px
+  margin-left: 10px
+
+ul.rise-list.second
+  width: 66px
+
+p.new
+  letter-spacing: 4px
+  font-weight: 700
+  color: #E68613
+  margin-top: 10px
+
+audio
+  width: 90%
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+  border-radius: 40px
+  &:focus
+    outline: none
+
+.card.card2
+  border-top: 4px solid $twitter
+
+.card.card3
+  border-top: 4px solid $lime-green
+  border-radius: 5px
+
+.icon-list.icon-list3
+  width: 104px
+
+.rise-list.rise-list3
+  width: 20px
+
+.card.card-4
+  border-top: 4px solid $you-tube
+
+.icon-list.icon-list4
+  width: 83px
+
+.rise-list.rise-list4
+  width: 72px
+
+p.rise.fall
+  color: $bright-red
+
+.second-grid
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+h1.overview
+  margin: 30px 0
+  color: $dark-grayish-blue-text
+  font-size: 20px
+
+.card-container
+  background-color: $light-grayish-blue-card-BG
+  width: 255px
+  padding: 30px 0
+  text-align: center
+  border-radius: 5px
+  margin-bottom: 20px
+
+.card-flex
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+.numbers-word
+  text-align: left
+  margin-left: 20px
+
+p.page
+  color: $dark-grayish-blue-text
+  font-weight: 700
+  margin-bottom: 5px
+
+p.rise.nothing
+  color: $dark-grayish-blue-text
+  margin-top: 30px
+
+h1.odogwu
+  color: $very-dark-blue-text
+  font-size: 18px
+
+.icons-grid
+  text-align: right
+  margin-right: 20px
+
+ul.rise-list.percent1
+  width: 31px
+  margin-top: 30px
+
+ul.rise-list.percent1.percent3
+  width: 52px
+
+ul.rise-list.percent1.percent5
+  width: 46px
+
+ul.rise-list.percent1.percent7
+  width: 36px
+
+
+@media (max-width: 768px)
+  header
+    background: none
+
+  .container
+    width: 87%
+
+  .dark
+    justify-content: space-between
+    width: 100%
+
+  .line
+    width: 100%
+    border-top: 1px solid $dark-grayish-blue-text
+    margin-top: 20px
+
+  .first-grid,
+  .second-grid
+    justify-content: space-around
+
+  .card,
+  .card-container
+    width: 314px
+    margin-bottom: 20px
